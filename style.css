@@ -1,0 +1,1234 @@
+@font-face {
+  font-family: ABC Favorit;
+  src: url(./ABCFavorit/ABCFavoritMono-Book.otf);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul,
+li {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  /* width: 100%; */
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+body {
+  /* font-family: "ES Klarheit Grotesk Mono TRIAL Book" */
+  font-family: General Sans;
+  font-weight: 600;
+  background-color: #fff;
+}
+
+.container {
+  width: min(100% - 3rem, 76rem);
+  margin-inline: auto;
+  /* border: 1px solid #ff7020; */
+}
+
+section,
+footer {
+  padding-block: 3.75rem;
+}
+
+.btn {
+  padding: 1.625rem 0;
+  border-radius: 0.75rem;
+  color: #fff;
+  text-align: center;
+  font-size: 1.125rem;
+  font-style: normal;
+  line-height: 150%; /* 1.6875rem */
+  letter-spacing: -0.0225rem;
+}
+
+.sm-text {
+  color: #a5a8ae;
+  text-align: center;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.125rem; /* 128.571% */
+  text-transform: uppercase;
+}
+
+.h3 {
+  color: #223043;
+  font-size: 2.25rem;
+  font-size: clamp(2.25rem, 1.8919129082426127rem + 1.45800933125972vw, 3rem);
+  font-style: normal;
+  font-weight: 600;
+  line-height: 2.5rem; /* 111.111% */
+  letter-spacing: -0.045rem;
+  margin-block: 1rem;
+}
+
+.p-text {
+  color: #2c3e56;
+  text-align: center;
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.description {
+  color: #2c3e56;
+  text-align: center;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.125rem; /* 128.571% */
+}
+
+/* Navbar */
+
+header {
+  width: 100%;
+  background: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-block: 1.12rem;
+}
+
+@media screen and (max-width: 1023px) {
+  .nav__menu {
+    position: fixed;
+    background-color: #fff;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100%;
+    transition: 0.3s;
+  }
+}
+
+.nav__close {
+  font-size: 2rem;
+  position: absolute;
+  top: 0.9rem;
+  right: 1.25rem;
+  cursor: pointer;
+}
+
+.nav__toggle img {
+  display: inline-flex;
+  cursor: pointer;
+  color: black;
+}
+
+/* Show menu */
+.show-menu {
+  right: 0;
+}
+
+/* Change background header */
+.scroll-header {
+  background-color: #fff;
+  box-shadow: 0 1px 4px hsla(0, 4%, 15%, 0.1);
+}
+
+.nav__lists {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4.19rem;
+  padding-top: 9rem;
+}
+
+.nav__list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.nav__link {
+  transition: 0.3s;
+  display: flex;
+  gap: 0.5rem;
+  color: #223043;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 100%; /* 1rem */
+  letter-spacing: -0.029rem;
+}
+
+.active-link {
+  font-weight: 600;
+}
+
+.nav__link .btn {
+  display: flex;
+  padding: 0.8625rem 1.3125rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.375rem;
+  border-radius: 0.6rem;
+  background: #11b68e;
+  color: #fff;
+  text-align: center;
+  font-family: "ES Klarheit Grotesk Mono TRIAL Book";
+  font-size: 0.875rem;
+  font-style: normal;
+  /* font-weight: 700; */
+  line-height: 150%; /* 1.3125rem */
+}
+
+/* Hero section  */
+
+.hero-section {
+  padding-top: 8.54rem;
+  background: radial-gradient(50% 50% at 50% 50%, #f2f9f6 0%, #e4f2ed 100%);
+}
+
+.hero-section .container {
+  display: flex;
+  flex-direction: column;
+  gap: 9rem;
+}
+
+.hero-section .container .hero {
+  display: flex;
+  flex-direction: column;
+  gap: 4.25rem;
+}
+
+.hero-section .container .hero-content {
+  display: flex;
+  flex-direction: column;
+
+  gap: 3rem;
+}
+
+.hero-section .container .hero-content small {
+  color: #a5a8ae;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.125rem; /* 128.571% */
+  text-transform: uppercase;
+}
+
+.hero-section .container .hero-content h1 {
+  color: #223043;
+  font-size: 3rem;
+  font-size: 3rem;
+  font-size: clamp(3rem, 2.522550544323484rem + 1.9440124416796267vw, 4rem);
+  font-style: normal;
+  line-height: 3.125rem; /* 104.167% */
+  letter-spacing: -0.06rem;
+  margin-block: 1.5rem 1.6rem;
+}
+
+.hero-section .container .hero-content p {
+  color: #2c3e56;
+
+  /* Paragraph L */
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.hero-section .container .hero-content .hero-content-bt a {
+  background: #11b68e;
+  display: block;
+}
+
+.hero-section .container .hero .hero-content .hero-content-bt p {
+  color: #2c3e56;
+  /* Paragraph M */
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-block: 1.5rem;
+}
+
+.hero-section .container .hero .hero-content .hero-content-bt small {
+  color: #223043;
+
+  /* Paragraph S */
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.125rem; /* 128.571% */
+  text-transform: none;
+  opacity: .5;
+}
+
+.hero-section .container .hero .hero-img {
+  position: relative;
+  display: block;
+}
+
+.hero-section .container .hero .hero-img img {
+  width: 100%;
+  display: block;
+}
+
+.hero-section .container .hero .hero-img .achievements {
+  position: absolute;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 0rem 1.5rem;
+  gap: 0.75rem;
+  bottom: -5rem;
+  justify-content: center;
+}
+
+.hero-section .container .hero .hero-img .achievements li {
+  display: flex;
+  padding: 1.375rem 0.875rem;
+  flex-direction: column;
+  gap: 0.5rem;
+  border-radius: 1rem;
+  backdrop-filter: blur(5px);
+  min-height: 8.725rem;
+}
+
+.hero-section .container .hero .hero-img .achievements li h3 {
+  text-align: center;
+  font-size: 2.25rem;
+  font-style: normal;
+  line-height: 2.5rem; /* 111.111% */
+  letter-spacing: -0.045rem;
+}
+
+.hero-section .container .hero .hero-img .achievements li p {
+  text-align: center;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.125rem; /* 128.571% */
+}
+
+.orange {
+  background: #ff7020;
+  color: #fff;
+}
+
+.blue {
+  background-color: #c6e5d9;
+  color: #223043;
+}
+
+.green {
+  background-color: #11b68e;
+  color: #fff;
+}
+
+.pink {
+  background-color: #ffeae5;
+  color: #223043;
+}
+
+.hero-section .container .brands {
+  /* padding-top: 9rem; */
+  display: flex;
+  flex-direction: column;
+  gap: 1.9375rem;
+  align-items: center;
+}
+
+.hero-section .container .brands p {
+  color: #223043;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  opacity: 0.5;
+}
+
+.hero-section .container .brands .brands-imgs {
+  display: flex;
+  align-items: center;
+  gap: 1rem 2.385rem;
+  flex-wrap: wrap;
+  mix-blend-mode: hard-light;
+}
+
+/* Remote hiring section  */
+
+.remote-hiring {
+  display: flex;
+  flex-direction: column;
+  gap: 2.25rem;
+  align-items: center;
+}
+
+.remote-hiring .remote-hiring-content {
+  display: flex;
+  flex-direction: column;
+  gap: 3.75rem;
+}
+
+.remote-hiring .remote-hiring-content .remote-hiring-titles {
+  display: flex;
+  flex-direction: column;
+
+  text-align: center;
+  max-width: 36.25rem;
+}
+
+.remote-hiring .remote-hiring-content .remote-hiring-features {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.remote-hiring .remote-hiring-content .remote-hiring-features li {
+  padding: 3rem 2.25rem;
+}
+
+.remote-hiring .remote-hiring-content .remote-hiring-features li .icon {
+  padding: 0.625rem;
+  border-radius: 0.375rem;
+  border: 1px solid #ff7020;
+  background: #ffeae5;
+  display: inline-block;
+}
+
+.remote-hiring .remote-hiring-content .remote-hiring-features li h5 {
+  color: #223043;
+  font-size: 1.5rem;
+  font-style: normal;
+  line-height: 1.875rem; /* 125% */
+  letter-spacing: -0.03rem;
+  margin-block: 1.5rem 1.06rem;
+}
+
+.remote-hiring .remote-hiring-content .remote-hiring-features li p {
+  color: #797f8a;
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.remote-hiring .remote-hiring-des {
+  padding-block: calc(0.75rem + 0.62rem) 0.75rem;
+  border-top: solid 0.0625rem rgb(34, 48, 67, 0.2);
+  color: #2c3e56;
+  text-align: center;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.125rem; /* 128.571% */
+}
+
+/* Recruiting section  */
+
+.recruiting {
+  background-color: #f2f3f3;
+}
+
+.recruiting .container {
+  display: flex;
+  flex-direction: column;
+  gap: 2.25rem;
+}
+
+.recruiting .container .content {
+  display: flex;
+  flex-direction: column;
+  gap: 3.75rem;
+}
+
+.recruiting .container .content .titles {
+  text-align: center;
+  max-width: 36.25rem;
+}
+
+.recruiting .container .content .table-container {
+  display: flex;
+  gap: 2.31rem;
+  width: 100%;
+  flex: 1;
+}
+
+.recruiting .container .content .table-container .swiper-wrapper .card {
+  display: flex;
+  flex-direction: column;
+  gap: 1.125rem;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  background: #fff;
+}
+
+.recruiting .container .content .table-container .card:last-of-type {
+  background: linear-gradient(180deg, #0b735a 0%, #085140 100%);
+}
+
+.recruiting .container .content .table-container .card .title {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.recruiting .container .content .table-container .card .title h6 {
+  color: #223043;
+  font-size: 1.25rem;
+  font-style: normal;
+  line-height: 1.5rem; /* 120% */
+  letter-spacing: -0.025rem;
+}
+
+.recruiting .container .content .table-container .card .title img {
+  width: 8.76013rem;
+  height: 2.19969rem;
+}
+
+.recruiting .container .content .table-container .card .title p {
+  color: #797f8a;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.125rem; /* 128.571% */
+}
+
+.recruiting .container .content .table-container .card .table .row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 1.125rem;
+}
+
+.recruiting .container .content .table-container .card .table .row .label,
+.recruiting .container .content .table-container .card .table .row .answer {
+  padding: 0.875rem 0rem;
+  border-bottom: 1px solid #e4f2ed;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.recruiting .container .content .table-container .card .table .row .label {
+  color: #797f8a;
+}
+
+.recruiting .container .content .table-container .card .table .row .answer {
+  color: #223043;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.recruiting .container .content .table-container .card:last-of-type .title p,
+.recruiting
+  .container
+  .content
+  .table-container
+  .card:last-of-type
+  .table
+  .row
+  .label,
+.recruiting
+  .container
+  .content
+  .table-container
+  .card:last-of-type
+  .table
+  .row
+  .answer {
+  color: #fff;
+}
+
+.recruiting
+  .container
+  .content
+  .table-container
+  .card:last-of-type
+  .table
+  .row
+  .label,
+.recruiting
+  .container
+  .content
+  .table-container
+  .card:last-of-type
+  .table
+  .row
+  .answer {
+  border-bottom: 1px solid #0b735a;
+}
+
+.recruiting
+  .container
+  .content
+  .table-container
+  .card
+  .table
+  .row:last-child
+  .label,
+.recruiting
+  .container
+  .content
+  .table-container
+  .card
+  .table
+  .row:last-child
+  .answer {
+  border-bottom: none;
+}
+
+.table-wrapper {
+  display: none;
+}
+
+/* Dynamo-benfits section  */
+
+.dynamo-benefits {
+  display: flex;
+  flex-direction: column;
+  gap: 2.25rem;
+}
+
+.dynamo-benefits .content {
+  display: flex;
+  flex-direction: column;
+  gap: 3.75rem;
+}
+
+.dynamo-benefits .content .intro {
+  max-width: 35.3rem;
+  text-align: center;
+}
+
+.dynamo-benefits .content ul {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.dynamo-benefits .content ul li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2.25rem 0rem;
+  border-radius: 1rem;
+  border: 1px solid #e5e6e7;
+  background: #fff;
+  text-align: center;
+}
+
+.dynamo-benefits .content ul li .icon {
+  padding: 0.75rem;
+  border-radius: 0.45rem;
+  border: 1.2px solid #ff7020;
+  background: #ffeae5;
+}
+
+.dynamo-benefits .content ul li h4 {
+  color: #223043;
+  text-align: center;
+  font-size: 2.25rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 100%; /* 2.25rem */
+  margin-block: 1.5rem 0.88rem;
+}
+
+.dynamo-benefits .content ul li p {
+  color: #223043;
+  font-family: "ES Klarheit Grotesk Mono TRIAL Book";
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 110%; /* 1.1rem */
+}
+
+/* Find talent section  */
+
+.find-talent {
+  background: #f2f9f6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.find-talent .intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.find-talent .icons {
+  margin-block: 3.75rem 2.25rem;
+  display: flex;
+  justify-content: center;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.find-talent .icons img {
+  display: inline-block;
+  padding: 1.58656rem;
+  border-radius: 1.00963rem;
+  border: 1.154px solid #c6e5d9;
+  background: #f2f9f6;
+  box-shadow: 0px 0px 0px 2.308px #bfd1cc;
+}
+
+.find-talent .frame {
+  overflow: hidden;
+  object-fit: cover;
+  width: 56.28125rem;
+  height: 3.65625rem;
+  fill: #a2d6c3;
+  mix-blend-mode: darken;
+}
+
+.find-talent .skills {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin-block: 3.75rem 2.25rem;
+}
+
+.find-talent .skills li {
+  display: block;
+  text-align: center;
+  padding: 1rem 0;
+  border-radius: 0.75rem;
+  border: 1px solid #c6e5d9;
+  background: #f2f9f6;
+  box-shadow: 0px 0px 0px 2px #bfd1cc;
+  color: #085140;
+  font-family: "ES Klarheit Grotesk Mono TRIAL Book";
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 110%; /* 1.1rem */
+}
+
+/* Trusted worldwide section  */
+
+.trusted-worldwide {
+  display: flex;
+  flex-direction: column;
+  gap: 2.25rem;
+  padding-bottom: 5.62rem;
+}
+
+.trusted-worldwide .content {
+  display: flex;
+  flex-direction: column;
+  gap: 4.25rem;
+}
+
+.trusted-worldwide .content .content-text .intro {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.trusted-worldwide .content .content-text ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.trusted-worldwide .content .content-text ul li {
+  display: flex;
+  padding: 0rem 2.25rem 0rem 1.125rem;
+  align-items: center;
+  gap: 1.375rem;
+  transition: align-items 0.3s ease; /* Smooth alignment transition */
+  cursor: pointer;
+  transition: background 0.4s ease, padding 0.4s ease;
+}
+
+.trusted-worldwide .content .content-text ul li.flex-start {
+  align-items: flex-start; /* Change alignment when accordion is open */
+}
+
+.trusted-worldwide .content .content-text ul li .icon {
+  display: inline-block;
+  padding: 0.56819rem;
+  border-radius: 0.34094rem;
+  border: 0.909px solid #ff7020;
+  background: #ffeae5;
+}
+
+.trusted-worldwide .content .content-text ul li .accordian {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.trusted-worldwide .content .content-text ul li .accordian .question p {
+  color: #2c3e56;
+  font-size: 1.25rem;
+  font-style: normal;
+  line-height: 100%; /* 1.25rem */
+  letter-spacing: -0.03625rem;
+}
+
+/* Smooth accordion animation */
+.trusted-worldwide .content .content-text ul li .accordian .answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.4s ease;
+}
+
+/* Apply new styles when the accordion is active */
+.trusted-worldwide .content .content-text ul li.active {
+  padding-block: 1.25rem; /* Apply padding to active accordion */
+  border-radius: 1rem; /* Rounded corners */
+  background: #fffaf6; /* Light background color */
+  /* Smooth transition for these styles */
+}
+
+.trusted-worldwide .content .content-text ul li .accordian .answer p {
+  color: #2c3e56;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 1.5rem */
+}
+
+.trusted-worldwide .content .content-img {
+  display: inline-flex;
+  width: 100%;
+}
+
+.trusted-worldwide .description {
+  padding-block: 1.37rem 0.75rem;
+  border-top: 0.0625rem solid rgba(34, 48, 67, 0.2);
+}
+
+/* Testimonials  */
+
+.testimonials {
+  background: #085140;
+}
+
+.testimonials .container {
+  display: flex;
+  flex-direction: column;
+  gap: 3.75rem;
+}
+
+.testimonials .container .intro {
+  text-align: center;
+}
+
+.testimonials .container .intro small,
+.testimonials .container .intro p {
+  color: #a2d6c3;
+}
+
+.testimonials .container .intro h3 {
+  color: #fff;
+}
+
+.testimonials .container ul {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 1.5rem;
+}
+
+.testimonials .container ul li {
+  padding: 2.25rem;
+  border-radius: 1rem;
+  background: linear-gradient(180deg, #0b735a 0%, #085140 100%);
+}
+
+.testimonials .container ul li .images {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  align-items: center;
+  margin-bottom: 1.88rem;
+}
+
+.testimonials .container ul li .images img {
+  display: inline-flex;
+}
+
+.testimonials .container ul li p {
+  color: #fff;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 1.5rem */
+  margin-bottom: 1.69rem;
+}
+
+.testimonials .container ul li .name {
+  color: #fff;
+  font-size: 1rem;
+  font-style: normal;
+  line-height: 150%; /* 1.5rem */
+}
+
+.testimonials .container ul li .position {
+  color: #fff;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 1.3125rem */
+}
+
+/* Trial offer section  */
+
+/* .trial-offer .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+} */
+
+.trial-offer .container .intro {
+  text-align: center;
+  max-width: 40.625rem;
+  margin-bottom: 3rem;
+  margin-inline: auto;
+}
+
+.trial-offer .container .intro h2 {
+  color: #223043;
+  font-size: 3rem;
+  font-size: clamp(3rem, 2.2838258164852254rem + 2.91601866251944vw, 4.5rem);
+  font-style: normal;
+  line-height: 3.125rem; /* 104.167% */
+  letter-spacing: -0.06rem;
+  margin-block: 1.5rem 1.62rem;
+}
+
+.trial-offer .container .cta {
+  text-align: center;
+}
+
+.trial-offer .container .cta a {
+  background: #ff7020;
+  margin-bottom: 1.62rem;
+  display: block;
+  width: 100%;
+}
+
+.trial-offer .container .cta p {
+  color: #223043;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%; /* 1.3rem */
+  opacity: 0.5;
+  max-width: 19.125rem;
+  margin-inline: auto;
+}
+
+/* FAQs section  */
+
+.faqs {
+  background: #f3f3f3;
+}
+
+.faqs .container {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.faqs .container .intro {
+  max-width: 35.1rem;
+}
+
+.faqs .container .intro small {
+  color: #a5a8ae;
+  font-family: Inter;
+  font-size: 1rem;
+  font-style: normal;
+  line-height: 1.5rem; /* 150% */
+}
+
+.faqs .container .intro h2 {
+  color: #1c2736;
+  font-size: 3rem;
+  font-style: normal;
+  line-height: 2.75rem; /* 91.667% */
+  letter-spacing: -0.06rem;
+  margin-block: 0.75rem 1.25rem;
+}
+
+.faqs .container .intro p {
+  color: #797f8a;
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.75rem; /* 155.556% */
+}
+
+.faqs .container .qnas {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.faqs .container .qnas .faq-accordian {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: space-between;
+  align-items: flex-start;
+  cursor: pointer;
+}
+
+.faqs .container .qnas .faq-accordian .qna {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.faqs .container .qnas .faq-accordian .qna .question p {
+  color: #1c2736;
+  font-size: 1.125rem;
+  font-style: normal;
+  line-height: 1.75rem; /* 155.556% */
+}
+
+.faqs .container .qnas .faq-accordian .qna .answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+  color: #797f8a;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5rem; /* 150% */
+}
+
+.faqs .container .qnas .faq-accordian .plus-icon {
+  transition: transform 0.4s ease;
+}
+
+.faqs .container .qnas .faq-accordian .plus-icon.active {
+  transform: rotate(-315deg);
+}
+
+/* Footer  */
+
+footer {
+  background: #1c2736;
+}
+
+footer .container {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  gap: 3.75rem;
+  color: #fff;
+}
+
+footer .container .company-details p {
+  font-size: 1.25rem;
+  font-style: normal;
+  line-height: 1.5rem; /* 120% */
+  letter-spacing: -0.025rem;
+  max-width: 18.75rem;
+  margin-top: 1.5rem;
+}
+
+footer .container .company-details .footer-social {
+  display: none;
+}
+
+footer .container .footer-links {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.25rem;
+}
+
+footer .container .footer-links .column h5 {
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%; /* 1.125rem */
+  margin-bottom: 2.25rem;
+}
+
+footer .container .footer-links .column ul {
+  color: #fff;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 205%; /* 2.05rem */
+}
+
+footer .container .footer-links .column ul li a {
+  color: #fff;
+}
+
+footer .container .footer-social-mobile {
+  display: flex;
+  flex-direction: column;
+  gap: 3.75rem;
+}
+
+footer .container .footer-social-mobile p {
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%; /* 1rem */
+  margin-bottom: 1rem;
+}
+
+footer .container .footer-social-mobile ul {
+  display: flex;
+  gap: 0.75rem;
+}
+
+footer .container .footer-social-mobile ul li a {
+  border-radius: 6.25rem;
+  padding: 0.375rem;
+  background: #2c3e56;
+  display: flex;
+  align-items: center;
+}

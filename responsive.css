@@ -1,0 +1,426 @@
+@media (min-width: 475px) {
+  .container {
+    max-width: 475px;
+  }
+
+  .dynamo-benefits .content ul {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .testimonials .container ul li .images {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: 640px) {
+  .container {
+    max-width: 640px;
+  }
+
+  .hero-section .container .hero-content h1 {
+    line-height: 3.875rem; /* 96.875% */
+    letter-spacing: -0.08rem;
+  }
+
+  .hero-section .container .hero .hero-img .achievements {
+    grid-template-columns: repeat(4, 1fr);
+    padding: 0rem 1.69rem;
+    bottom: -3.72rem;
+  }
+
+  .hero-section .container {
+    gap: 6rem;
+  }
+
+  .hero-section .container .brands .brands-imgs {
+    justify-content: center;
+  }
+
+  .remote-hiring .remote-hiring-content .remote-hiring-titles {
+    margin-inline: auto;
+  }
+
+  .remote-hiring .remote-hiring-content .remote-hiring-features {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .recruiting .container .content .titles {
+    margin-inline: auto;
+  }
+
+  .recruiting .container .content .table-container {
+    display: none;
+  }
+
+  .table-wrapper {
+    display: block;
+    padding-block: 1.5rem;
+    background: #fff;
+    border-radius: 1rem;
+  }
+
+  .comparison-table {
+    background: #fff;
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: separate; /* Use separate borders */
+    border-spacing: 1.5rem 0; /* Set gap between columns and rows */
+  }
+
+  .comparison-table tr {
+    text-align: center;
+  }
+
+  .comparison-table thead {
+    margin-bottom: 0.75rem;
+  }
+
+  th,
+  td {
+    vertical-align: middle; /* Vertically aligns all cells */
+  }
+
+  .comparison-table thead tr th h3 {
+    margin-bottom: 0.5rem;
+    color: #223043;
+    font-size: 1.25rem;
+    font-style: normal;
+    line-height: 1.5rem; /* 120% */
+    letter-spacing: -0.025rem;
+  }
+
+  .comparison-table thead tr th .column-description {
+    color: #797f8a;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.125rem; /* 128.571% */
+  }
+
+  .comparison-table tbody tr .column-title {
+    color: #797f8a;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: left;
+  }
+
+  .comparison-table tbody tr td {
+    color: #223043;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding: 0.875rem 0rem;
+    border-bottom: 1px solid #e4f2ed;
+  }
+
+  .comparison-table tbody tr:last-of-type td {
+    border-bottom: none;
+  }
+
+  col.dynamo-column {
+    border-radius: 1rem;
+    background: linear-gradient(180deg, #0b735a 0%, #085140 100%);
+    padding: 1rem;
+  }
+
+  /* Text color inside the DYNAMO column */
+  .dynamo-column th,
+  .dynamo-column td {
+    color: white;
+  }
+
+  .comparison-table th h3 img {
+    display: block;
+    margin: 0 auto;
+  }
+
+  .comparison-table th:nth-child(4), /* Target the header of the DYNAMO column */
+  .comparison-table td:nth-child(4) {
+    /* Target the cells in the DYNAMO column */
+    color: white;
+    padding: 6px; /* Add padding to DYNAMO column cells */
+  }
+
+  .comparison-table th:nth-child(4) .column-description {
+    color: white; /* Set text color to white */
+  }
+
+  .comparison-table td:nth-child(4) {
+    border-bottom: 1px solid #0b735a;
+  }
+
+  .comparison-table thead tr:first-of-type th:nth-child(4) {
+    border-top-left-radius: 10px; /* Round top left */
+    border-top-right-radius: 10px; /* Round top right */
+  }
+  .comparison-table tr:last-child td:nth-child(4) {
+    border-bottom-left-radius: 10px; /* Round bottom left */
+    border-bottom-right-radius: 10px; /* Round bottom right */
+  }
+
+  .dynamo-benefits .content .intro {
+    margin-inline: auto;
+  }
+
+  .find-talent .intro {
+    max-width: 35.3rem;
+  }
+
+  .find-talent .skills {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .find-talent .skills li {
+    padding: 1rem 1.375rem;
+  }
+
+  .testimonials .container .intro {
+    max-width: 35.3rem;
+    margin-inline: auto;
+  }
+
+  .testimonials .container ul {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .trial-offer .container .intro h2 {
+    line-height: 4rem;
+    letter-spacing: -0.09rem;
+    font-weight: 700;
+  }
+
+  footer .container .footer-links {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+
+  .h3 {
+    line-height: 3.125rem; /* 104.167% */
+    letter-spacing: -0.06rem;
+  }
+
+  .trusted-worldwide .content .content-text {
+    max-width: 32.87rem;
+    margin-inline: auto;
+  }
+
+  .trial-offer .container .cta a {
+    width: auto;
+    display: inline-block;
+    padding: 1.625rem 3.75rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+
+  section {
+    padding-block: 5.82rem;
+  }
+
+  .nav__toggle,
+  .nav__close {
+    display: none;
+  }
+
+  .nav__lists {
+    flex-direction: row;
+    gap: 4.1875rem;
+    padding-top: 0;
+  }
+
+  .nav__list {
+    flex-direction: row;
+    gap: 1.5rem;
+  }
+
+  .hero-section .container .hero {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3.25rem;
+  }
+
+  .hero-section .container .hero .hero-img .achievements {
+    padding: 0rem 0.7rem;
+    bottom: 4.72rem;
+  }
+
+  .hero-section .container .hero .hero-img .achievements li h3 {
+    font-size: 2rem;
+  }
+
+  .hero-section .container {
+    gap: 4rem;
+  }
+
+  .hero-content-bt {
+    max-width: 18.75rem;
+  }
+
+  .table-wrapper {
+    padding-block: 2.25rem;
+  }
+
+  .comparison-table {
+    border-spacing: 2.31rem 0;
+  }
+
+  .comparison-table thead tr:first-of-type th:nth-child(4) {
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    padding-top: 0.75rem;
+    padding-inline: 1.12rem;
+  }
+
+  .comparison-table th:nth-child(4),
+  .comparison-table td:nth-child(4) {
+    padding-bottom: 0.75rem;
+    padding-inline: 1.12rem;
+  }
+
+  .comparison-table tr:last-child td:nth-child(4) {
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+  }
+
+  .dynamo-benefits .content ul {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .trusted-worldwide .content {
+    display: grid;
+    flex-direction: column;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0;
+  }
+
+  .trusted-worldwide .content .content-text .intro {
+    text-align: left;
+  }
+
+  .trusted-worldwide .content .content-text .intro .p-text {
+    text-align: left;
+  }
+
+  .testimonials .container ul {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .faqs .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  footer .container .footer-links {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1216px) {
+  .container {
+    max-width: 1216px;
+  }
+
+  .hero-section {
+    padding-top: 10.91rem;
+  }
+
+  .hero-section .container .hero {
+    align-items: center;
+    gap: 4.25rem;
+  }
+
+  .hero-section .container .hero .hero-img .achievements {
+    padding: 0rem 1.69rem;
+    bottom: -3.72rem;
+  }
+
+  .hero-section .container .hero .hero-img .achievements li h3{
+    font-size: 2.25rem;
+  }
+
+  .hero-section .container {
+    gap: 8.46rem;
+  }
+
+  .hero-section .container .brands {
+    align-items: normal;
+  }
+
+  .hero-section .container .brands .brands-imgs {
+    justify-content: space-between;
+  }
+
+  .remote-hiring .remote-hiring-content .remote-hiring-features {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .testimonials .container ul {
+    gap: 2.31rem;
+  }
+
+  .trial-offer .container .intro h2 {
+    line-height: 5rem;
+  }
+
+  footer {
+    padding-block: 5rem;
+  }
+
+  footer .container {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 6.88rem;
+  }
+
+  footer .container .footer-social-mobile {
+    display: none;
+  }
+
+  footer .container .company-details .footer-social {
+    display: block;
+  }
+
+
+  footer .container .footer-social {
+    display: flex;
+    flex-direction: column;
+    gap: 3.75rem;
+  }
+  
+  footer .container .footer-social p {
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%; /* 1rem */
+    margin-bottom: 1rem;
+    margin-top: 2.25rem;
+  }
+  
+  footer .container .footer-social ul {
+    display: flex;
+    gap: 0.75rem;
+  }
+  
+  footer .container .footer-social ul li a {
+    border-radius: 6.25rem;
+    padding: 0.375rem;
+    background: #2c3e56;
+    display: flex;
+    align-items: center;
+  }
+}
